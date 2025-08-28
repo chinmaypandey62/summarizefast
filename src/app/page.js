@@ -1,95 +1,66 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import Link from 'next/link';
+import Button from '@/components/Button';
+import UploadArea from '@/components/UploadArea';
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.js</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+    <div className="homepage">
+      <section className="hero-section">
+        <div className="container">
+          <div className="hero-content">
+            <h1 className="hero-title">
+              Transform PDFs into 
+              <span className="hero-accent"> Intelligent Summaries</span>
+            </h1>
+            <p className="hero-description">
+              Harness the power of AI to extract key insights from your documents. 
+              Upload any PDF and get structured, concise summaries in seconds.
+            </p>
+            
+            <div className="hero-upload-section">
+              <UploadArea variant="compact" />
+              <div className="upload-divider">
+                <span>or</span>
+              </div>
+              <div className="hero-actions">
+                <Link href="/summarize">
+                  <Button size="large" variant="outline">
+                    Browse Examples
+                  </Button>
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </section>
+      
+      <section className="features-section">
+        <div className="container">
+          <h2 className="section-title">Why Choose Our AI Assistant?</h2>
+          <div className="features-grid">
+            <div className="feature-card">
+              <div className="feature-icon">📄</div>
+              <h3>PDF Processing</h3>
+              <p>Advanced text extraction from complex PDF documents with high accuracy.</p>
+            </div>
+            <div className="feature-card">
+              <div className="feature-icon">🤖</div>
+              <h3>AI-Powered</h3>
+              <p>Cutting-edge AI technology that understands context and meaning.</p>
+            </div>
+            <div className="feature-card">
+              <div className="feature-icon">⚡</div>
+              <h3>Lightning Fast</h3>
+              <p>Get your summaries in seconds, not minutes. Optimized for speed.</p>
+            </div>
+            <div className="feature-card">
+              <div className="feature-icon">📊</div>
+              <h3>Multiple Lengths</h3>
+              <p>Choose from short, medium, or long summaries based on your needs.</p>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
