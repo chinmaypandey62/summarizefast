@@ -1,11 +1,9 @@
 /* Summarize Page Styles */
 .summarize-page {
-  min-height: calc(100vh - var(--header-height));
+  min-height: 100vh;
   margin-top: 0;
-  padding-top: var(--header-height); /* Header height padding */
-  background: linear-gradient(135deg, 
-    var(--background-color) 0%, 
-    var(--surface-color) 100%);
+  padding-top: 0;
+  background: transparent;
   opacity: 1;
   transform: translateY(0);
   transition: all var(--transition-slow);
@@ -18,7 +16,7 @@
 
 /* Page entering animation */
 .summarize-page.page-entering {
-  background: var(--surface-color);
+  background: transparent !important;
   animation: pageEnterFromUpload 1.0s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
 }
 
@@ -26,40 +24,35 @@
   0% {
     opacity: 0;
     transform: scale(0.9) translateY(20px);
-    background: rgba(37, 99, 235, 0.15);
     filter: blur(2px);
   }
   30% {
     opacity: 0.3;
     transform: scale(0.95) translateY(10px);
-    background: rgba(37, 99, 235, 0.1);
     filter: blur(1px);
   }
   60% {
     opacity: 0.7;
     transform: scale(0.98) translateY(5px);
-    background: rgba(37, 99, 235, 0.05);
     filter: blur(0.5px);
   }
   100% {
     opacity: 1;
     transform: scale(1) translateY(0);
-    background: linear-gradient(135deg, 
-      var(--background-color) 0%, 
-      var(--surface-color) 100%);
     filter: blur(0px);
   }
 }
 
 .summarize-hero {
-  padding: var(--spacing-xl) 0;
-  min-height: calc(100vh - var(--header-height));
+  padding: 0;
+  min-height: 100vh;
+  height: 100vh;
   display: flex;
   align-items: center;
   background: linear-gradient(135deg, 
     rgba(15, 23, 42, 0.98) 0%, 
     rgba(30, 41, 59, 0.95) 50%,
-    rgba(15, 23, 42, 0.98) 100%);
+    rgba(15, 23, 42, 0.98) 100%) !important;
   position: relative;
   overflow: hidden;
 }
@@ -86,7 +79,7 @@
 .summarize-content {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 var(--spacing-lg);
+  padding: var(--header-height) var(--spacing-lg) var(--spacing-lg);
   position: relative;
   z-index: 2;
   display: grid;
@@ -1612,18 +1605,32 @@
 
 /* Mobile Styles */
 @media (max-width: 768px) {
+  .summarize-page {
+    background: transparent !important;
+    padding-top: 0;
+  }
+
   .summarize-hero {
-    height: 100vh;
-    min-height: 100vh;
-    padding: var(--spacing-lg) 0;
+    height: 100svh;
+    min-height: 100svh;
+    padding: 0;
+    background: linear-gradient(135deg, 
+      rgba(15, 23, 42, 0.98) 0%, 
+      rgba(30, 41, 59, 0.95) 50%,
+      rgba(15, 23, 42, 0.98) 100%) !important;
+    display: flex;
+    align-items: stretch;
   }
 
   .summarize-content {
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-xl);
-    padding: 0 var(--spacing-md);
+    gap: var(--spacing-sm);
+    padding: var(--header-height) var(--spacing-md) var(--spacing-md);
     text-align: center;
+    height: 100%;
+    max-height: calc(100svh - var(--header-height));
+    overflow-y: auto;
   }
 
   /* Override grid layouts for mobile */
@@ -1631,60 +1638,74 @@
   .summarize-content.configure-layout {
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-xl);
+    gap: var(--spacing-sm);
     align-items: center;
+    justify-content: flex-start;
+    height: 100%;
   }
 
   .upload-content-left,
   .configure-content-left {
     text-align: center;
     max-width: 100%;
+    flex-shrink: 0;
   }
 
   .upload-content-right,
   .configure-content-right {
     width: 100%;
     max-width: 100%;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   /* Responsive typography */
   .summarize-title {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     line-height: 1.2;
-    margin-bottom: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
+    color: #ffffff;
   }
 
   .summarize-description {
-    font-size: 0.95rem;
-    line-height: 1.5;
-    margin-bottom: var(--spacing-lg);
+    font-size: 0.85rem;
+    line-height: 1.4;
+    margin-bottom: var(--spacing-md);
     opacity: 0.9;
+    color: #e2e8f0;
   }
 
   /* Feature items responsive */
   .upload-features {
     justify-content: center;
     align-items: center;
-    margin-top: var(--spacing-md);
+    margin-top: var(--spacing-sm);
+    margin-bottom: var(--spacing-sm);
+    gap: var(--spacing-xs);
   }
 
   .feature-item {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     justify-content: center;
   }
 
   /* Configure layout mobile adjustments */
   .file-preview {
-    margin: var(--spacing-md) 0;
-    padding: var(--spacing-md);
+    margin: var(--spacing-sm) 0;
+    padding: var(--spacing-sm) var(--spacing-md);
+    background: rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
   }
 
   .summary-benefits {
-    margin-bottom: var(--spacing-lg);
+    margin-bottom: var(--spacing-sm);
+    gap: var(--spacing-xs);
   }
 
   .benefit-item {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     justify-content: center;
   }
 
@@ -1692,20 +1713,55 @@
   .summary-options-vertical {
     width: 100%;
     max-width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    padding: 0 var(--spacing-sm);
   }
 
   .summary-option-card {
-    margin-bottom: var(--spacing-sm);
+    margin-bottom: 0;
+    padding: var(--spacing-sm) var(--spacing-md);
+    min-height: 60px;
+  }
+
+  .option-content {
+    gap: var(--spacing-sm);
+  }
+
+  .option-info h3 {
+    font-size: 1rem;
+    margin-bottom: 2px;
+  }
+
+  .option-info p {
+    font-size: 0.8rem;
   }
 
   /* Back button mobile */
   .configure-actions {
-    margin-top: var(--spacing-md);
+    margin-top: var(--spacing-sm);
+    margin-bottom: var(--spacing-sm);
     text-align: center;
+    flex-shrink: 0;
   }
 
   .back-btn {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
+    padding: var(--spacing-xs) var(--spacing-sm);
+  }
+
+  /* Ensure proper spacing between sections */
+  .configure-content-left {
+    flex-shrink: 0;
+    padding-bottom: var(--spacing-sm);
+  }
+
+  .configure-content-right {
+    flex: 1;
+    min-height: 0;
   }
 }
 
