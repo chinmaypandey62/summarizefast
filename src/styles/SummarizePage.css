@@ -3,7 +3,10 @@
   min-height: 100vh;
   margin-top: 0;
   padding-top: 0;
-  background: transparent;
+  background: linear-gradient(135deg, 
+    rgba(15, 23, 42, 0.98) 0%, 
+    rgba(30, 41, 59, 0.95) 50%,
+    rgba(15, 23, 42, 0.98) 100%) !important;
   opacity: 1;
   transform: translateY(0);
   transition: all var(--transition-slow);
@@ -316,6 +319,59 @@
     padding-top: 0; /* Remove padding as split-layout handles it */
   }
   
+  /* Dark theme for all summary-related elements */
+  .summary-text {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    color: #f1f5f9 !important;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+  }
+  
+  .summary-result {
+    background: transparent !important;
+    color: #f1f5f9 !important;
+  }
+  
+  .summary-content-area {
+    background: transparent !important;
+    color: #f1f5f9 !important;
+  }
+  
+  .summary-display-container {
+    background: transparent !important;
+  }
+  
+  .summary-pane {
+    background: transparent !important;
+    color: #f1f5f9 !important;
+  }
+  
+  .document-pane {
+    background: transparent !important;
+    border-right-color: rgba(255, 255, 255, 0.2) !important;
+  }
+  
+  .split-layout {
+    background: transparent !important;
+  }
+  
+  .document-header {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-bottom-color: rgba(255, 255, 255, 0.2) !important;
+    color: #f1f5f9 !important;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+  }
+  
+  .summary-header {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-bottom-color: rgba(255, 255, 255, 0.2) !important;
+    color: #f1f5f9 !important;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+  }
+  
   /* Fix for floating buttons issue - ensure all buttons stay in their containers */
   .split-layout .btn,
   .split-layout .btn--small,
@@ -337,7 +393,6 @@
   }
   
   .summarize-page .summarize-hero {
-    /* padding-top: calc(var(--header-height) + 50px); */
     height: 100vh;
     /* Header height padding */
   }

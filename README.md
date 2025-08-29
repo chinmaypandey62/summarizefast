@@ -1,3 +1,22 @@
+# SummarizeFast - AI-Powered Document & Image Summarization
+
+Transform your PDFs, documents, and images into concise, intelligent summaries with AI technology. Upload, process, and get structured summaries in seconds.
+
+## Features
+
+- **Multi-Format Support**: Process PDFs, images (JPG, PNG), Word documents, text files, markdown, and more
+- **AI-Powered OCR**: Advanced text extraction from scanned documents and images
+- **Multiple Summary Lengths**: Choose from short, medium, or long summaries
+- **Lightning Fast Processing**: Get your summaries in seconds
+- **Mobile Responsive**: Optimized dark theme for mobile devices
+- **Drag & Drop Interface**: Easy file upload with visual feedback
+
+## Supported File Types
+
+- **Documents**: PDF, Word (.doc, .docx), Text (.txt), Markdown (.md), RTF, CSV, JSON, XML
+- **Images**: JPG, JPEG, PNG, GIF, WebP, BMP, SVG
+- **Maximum file size**: 10MB
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started

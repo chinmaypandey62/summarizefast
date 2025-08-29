@@ -46,7 +46,7 @@ export default function UploadArea({ variant = 'default', onFileUpload }) {
     if (file && isValidFileType(file)) {
       handleFileUpload(file);
     } else if (file) {
-      alert('Please select a supported file type: PDF, Word, text, markdown, image, or other document files.');
+      alert('Please select a supported file type: PDF, images (JPG, PNG), Word, text, markdown, or other document files.');
     }
   };
 
@@ -68,7 +68,7 @@ export default function UploadArea({ variant = 'default', onFileUpload }) {
     if (file && isValidFileType(file)) {
       handleFileUpload(file);
     } else if (file) {
-      alert('Please select a supported file type: PDF, Word, text, markdown, image, or other document files.');
+      alert('Please select a supported file type: PDF, images (JPG, PNG), Word, text, markdown, or other document files.');
     }
   };
 
@@ -145,11 +145,11 @@ export default function UploadArea({ variant = 'default', onFileUpload }) {
       >
         <div className="upload-placeholder">
           <div className="upload-icon">📄</div>
-          <h3>{isCompact ? 'Drop Document Here' : 'Drag & Drop Your Document'}</h3>
+          <h3>{isCompact ? 'Drop Document or Image Here' : 'Drag & Drop Your Document or Image'}</h3>
           <p>or click to browse files</p>
           {!isCompact && (
             <div className="upload-note">
-              Supports PDF, Word, images, text, markdown, and more • Max 10MB
+              Supports PDF, images (JPG, PNG), Word, text, markdown, and more • Max 10MB
             </div>
           )}
         </div>

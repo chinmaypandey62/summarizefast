@@ -380,9 +380,9 @@ export default function SummarizePage() {
           <div className="container">
             <div className="summarize-content upload-layout">
               <div className="upload-content-left">
-                <h1 className="summarize-title">Upload Your Document</h1>
+                <h1 className="summarize-title">Upload Your Document or Image</h1>
                 <p className="summarize-description">
-                  Drop your document here or click to browse. Supports PDF, Word, images, text, markdown, and more. 
+                  Drop your document or image here or click to browse. Supports PDF, images (JPG, PNG), Word, text, markdown, and more. 
                   Our AI will analyze and create an intelligent summary for you.
                 </p>
                 <div className="upload-features">
@@ -392,11 +392,11 @@ export default function SummarizePage() {
                   </div>
                   <div className="feature-item">
                     <span className="feature-icon">🖼️</span>
-                    <span>Images with text</span>
+                    <span>Images & Scanned documents</span>
                   </div>
                   <div className="feature-item">
                     <span className="feature-icon">⚡</span>
-                    <span>Fast AI processing</span>
+                    <span>Fast AI processing with OCR</span>
                   </div>
                 </div>
               </div>
@@ -416,7 +416,7 @@ export default function SummarizePage() {
               <div className="configure-content-left">
                 <h1 className="summarize-title">Choose Summary Length</h1>
                 <p className="summarize-description">
-                  Select how detailed you want your AI summary to be. Our AI will analyze your document and create the perfect summary length for your needs.
+                  Select how detailed you want your AI summary to be. Our AI will analyze your document or image and create the perfect summary length for your needs.
                 </p>
                 
                 <div className="file-preview">

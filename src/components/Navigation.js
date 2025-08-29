@@ -31,8 +31,8 @@ export default function Navigation() {
             className="nav-link nav-link--primary"
             onClick={handleNewFileClick}
           >
-            <span className="nav-icon">🚀</span>
-            {isOnSummaryPage ? 'New File' : 'Start Summarizing'}
+            {/* <span className="nav-icon">🚀</span> */}
+            {isOnSummaryPage ? 'New File' : "Let's Start"}
           </Link>
         </div>
       </div>

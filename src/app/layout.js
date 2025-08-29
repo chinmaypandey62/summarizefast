@@ -2,9 +2,9 @@ import Navigation from '@/components/Navigation';
 import "./globals.css";
 
 export const metadata = {
-  title: "SummarizeFast - AI-Powered PDF Summarization",
-  description: "Transform your PDFs into concise, intelligent summaries with AI technology. Upload, process, and get structured summaries in seconds.",
-  keywords: "PDF summarization, AI document processing, text extraction, document analysis",
+  title: "SummarizeFast - AI-Powered Document & Image Summarization",
+  description: "Transform your PDFs, documents, and images into concise, intelligent summaries with AI technology. Upload, process, and get structured summaries in seconds.",
+  keywords: "PDF summarization, document summarization, image OCR, AI document processing, text extraction, document analysis, scanned documents",
 };
 
 export default function RootLayout({ children }) {
