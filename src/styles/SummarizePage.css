@@ -1307,6 +1307,10 @@
     overflow: hidden;
   }
   
+  .split-layout.mobile-show-summary .summary-pane {
+    padding-top: var(--header-height);
+  }
+  
   .document-pane,
   .summary-pane {
     border: none;
