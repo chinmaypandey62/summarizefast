@@ -905,7 +905,7 @@
 /* Split Layout for Results */
 .split-layout {
   display: flex;
-  height: calc(100vh - var(--header-height));
+  height: 100svh;
   overflow: hidden;
   margin-top: 0; /* Respect the page padding-top instead of negative margin */
 }
@@ -1221,7 +1221,9 @@
   margin: 0;
   font-size: 1rem;
 }
-
+.mobile-show-summary {
+  padding-top: var(--header-height);
+}
 /* Summary Result - Maximized Display */
 .summary-result {
   flex: 1;
@@ -1288,7 +1290,9 @@
     padding-bottom: 70px; /* Floating nav space */
     box-sizing: border-box;
   }
-  
+  .mobile-show-summary {
+    padding: 0;
+  }
   /* Mobile View Toggle - Show only one pane at a time */
   .split-layout.mobile-show-summary .document-pane {
     display: none;
