@@ -68,7 +68,6 @@ document-summary-assistant/
 │   │   ├── Button.js          # Custom button component
 │   │   ├── FileViewer.js      # Document preview component
 │   │   ├── Navigation.js      # Header navigation
-│   │   ├── ThemeProvider.js   # Theme management
 │   │   └── UploadArea.js      # File upload interface
 │   └── styles/                # Component-specific CSS
 │       ├── Button.css
