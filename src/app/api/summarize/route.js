@@ -189,7 +189,7 @@ async function generateSummaryFromFile(base64Data, mimeType, fileName, summaryLe
     }
 
     const genAI = new GoogleGenerativeAI(apiKey);
-    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" }); // Use gemini-1.5-flash for file processing
+    const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" }); // Use gemini-1.5-flash for file processing
 
     // Create the file part for Google AI
     const filePart = {
