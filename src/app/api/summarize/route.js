@@ -152,7 +152,7 @@ async function generateSummaryFromText(textContent, fileName, summaryLength) {
     }
 
     const genAI = new GoogleGenerativeAI(apiKey);
-    const model = genAI.getGenerativeModel({ model: "gemini-flash-latest" });
+    const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
 
     // Create system prompts based on summary length
     const lengthPrompts = {
